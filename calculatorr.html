@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+
+        button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div>
+
+        <p>Input A: <input type="text" id="InputA" > </p> 
+        <p>Input B: <input type="text" id="InputB" > </p>  
+        <p>
+           
+            Operator: 
+        
+            <button onclick="ADD()">+</button> 
+            <button onclick="MIN()">-</button> 
+            <button onclick="MULTI()">*</button> 
+            <button onclick="DIVI()">/</button>
+         </p> 
+        <p>Result:</p> <p id="res"></p>
+
+
+        <script>
+
+            function ADD(){
+
+                var x=parseFloat(document.getElementById("InputA").value);
+                var y=parseFloat(document.getElementById("InputB").value);
+
+                var z=x+y;
+
+                document.getElementById("res").innerHTML=x+"+"+y+"="+z;
+
+                 
+            }
+            function MIN(){
+
+                  var x=parseFloat(document.getElementById("InputA").value);
+                  var y=parseFloat(document.getElementById("InputB").value);
+
+                  var z=x-y;
+
+                 document.getElementById("res").innerHTML=x+"-"+y+"="+z;
+
+ 
+            }
+            function MULTI(){
+
+              var x=parseFloat(document.getElementById("InputA").value);
+              var y=parseFloat(document.getElementById("InputB").value);
+
+               var z=x*y;
+
+               document.getElementById("res").innerHTML=x+"*"+y+"="+z;
+
+
+            }
+            function DIVI(){
+
+             var x=parseFloat(document.getElementById("InputA").value);
+             var y=parseFloat(document.getElementById("InputB").value);
+
+             var z=x/y;
+
+             document.getElementById("res").innerHTML=x+"/"+y+"="+z;
+
+
+            }
+        </script>
+        <style>
+            
+        </style>
+
+     
+
+
+
+
+
+    </div>
+
+</body>
+</html>
